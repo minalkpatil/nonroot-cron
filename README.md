@@ -25,17 +25,17 @@ This version of **Cron** is functionally based on <br>
 **System V**'s implementation and thus allows <br>
 every user to have their own **CronTab** file.
 
+</div>
+
 <ul>
   <li>Currently you have to manually create below directories. 
-    <br> /tmp/var/cron </br>
-    <br>/tmp/var/run</li></br>
+    <br> /tmp/var/cron 
+    <br>/tmp/var/run
+  </li>
   <li>cron should be run with same user as the owner of the above directories . </li>
   <li>You need to manually run the cron process in background </li>
   <li>this is most useful while running cron as a side process inside a container.</li>
 </ul> 
-
-</div>
-
 [<img height = 1000 width = 28% align = left  src = './Resources/Space.svg' >][#]
 [<img height = 1000 width = 28% align = right src = './Resources/Space.svg' >][#]
 
