@@ -62,11 +62,14 @@
 			/* where should the daemon stick its PID?
 			 * PIDDIR must end in '/'.
 			 */
+#ifndef PIDDIR
 #ifdef _PATH_VARRUN
 # define PIDDIR	_PATH_VARRUN
 #else
 # define PIDDIR "/etc/"
 #endif
+#endif
+
 #define PIDFILE		"cron.pid"
 #define _PATH_CRON_PID	PIDDIR PIDFILE
 

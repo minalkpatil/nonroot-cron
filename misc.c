@@ -205,10 +205,12 @@ set_cron_uid(void) {
 		exit(ERROR_EXIT);
 	}
 #else
+#ifndef NOSUIDBUILD
 	if (setuid(ROOT_UID) < OK) {
 		perror("setuid");
 		exit(ERROR_EXIT);
 	}
+#endif
 #endif
 }
 

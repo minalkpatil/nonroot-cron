@@ -65,7 +65,7 @@ LINTFLAGS	=	-hbxa $(INCLUDE) $(DEBUGGING)
 #<<assume gcc or clang>>
 CWARN		=	-Wall -Wno-unused -Wno-comment
 #<<manifest defines>>
-DEFS		=
+DEFS		=   -DCRONDIR=\"/tmp/var/cron/\" -DPIDDIR=\"/tmp/var/run/\" -DNOSUIDBUILD
 #(SGI IRIX systems need this)
 #DEFS		=	-D_BSD_SIGNALS -Dconst=
 #<<the name of the BSD-like install program>>

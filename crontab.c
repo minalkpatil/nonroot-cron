@@ -603,8 +603,13 @@ replace_cmd(void) {
 		goto done;
 	}
 
-	file_owner = (getgid() == getegid()) ? ROOT_UID : pw->pw_uid;
+#ifdef NOSUIDBUILD
+    file_owner = pw->pw_uid;
+#else
+    file_owner = (getgid() == getegid()) ? ROOT_UID : pw->pw_uid;
+#endif
 
+    printf("TempFilename=%s, file_owner=%d\n", TempFilename, file_owner);
 #ifdef HAS_FCHOWN
 	if (fchown(fileno(tmp), file_owner, -1) < OK) {
 		perror("fchown");
