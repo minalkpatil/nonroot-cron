@@ -25,6 +25,15 @@ This version of **Cron** is functionally based on <br>
 **System V**'s implementation and thus allows <br>
 every user to have their own **CronTab** file.
 
+<ul>
+  <li>Currently you have to manually create below directories. 
+    <br> /tmp/var/cron </br>
+    <br>/tmp/var/run</li></br>
+  <li>cron should be run with same user as the owner of the above directories . </li>
+  <li>You need to manually run the cron process in background </li>
+  <li>this is most useful while running cron as a side process inside a container.</li>
+</ul> 
+
 </div>
 
 [<img height = 1000 width = 28% align = left  src = './Resources/Space.svg' >][#]
@@ -36,7 +45,7 @@ every user to have their own **CronTab** file.
 ## 📑  Tabs
 
 All crontab files are stored in a read  
-protected folders at  `/var/cron/tabs` 
+protected folders at  `/tmp/var/cron/tabs` 
 
 <br>
 
@@ -60,7 +69,7 @@ command that is run by a CronTab.
 
 You can control access to the  `crontab`  
 command by utilizing the  `allow`  and  
-`deny`  files in  `/var/cron`
+`deny`  files in  `/tmp/var/cron`
 
 *The command is used to install crontabs.*
 
