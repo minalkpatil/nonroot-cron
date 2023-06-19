@@ -36,9 +36,6 @@ every user to have their own **CronTab** file.
   <li>You need to manually run the cron process in background </li>
   <li>this is most useful while running cron as a side process inside a container.</li>
 </ul> 
-[<img height = 1000 width = 28% align = left  src = './Resources/Space.svg' >][#]
-[<img height = 1000 width = 28% align = right src = './Resources/Space.svg' >][#]
-
 <br>
 <br>
 
